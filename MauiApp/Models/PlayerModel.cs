@@ -1,4 +1,4 @@
-namespace MauiApp.Models;
+namespace MauiApp1.Models;
 
 public class Player
 {

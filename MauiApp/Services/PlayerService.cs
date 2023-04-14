@@ -1,4 +1,4 @@
-﻿using MauiApp.Models;
+﻿using MauiApp1.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,9 +6,9 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace MauiApp.Services
+namespace MauiApp1.Services
 {
-    internal class PlayerService
+    public class PlayerService
     {
         private readonly string _playersFilePath;
 

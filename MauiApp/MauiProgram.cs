@@ -1,10 +1,10 @@
-﻿namespace MauiApp;
+﻿namespace MauiApp1;
 
 public static class MauiProgram
 {
-	public static MauiApp CreateMauiApp()
+	public static MauiApp1 CreateMauiApp()
 	{
-		var builder = MauiApp.CreateBuilder();
+		var builder = MauiApp1.CreateBuilder();
 		builder
 			.UseMauiApp<App>()
 			.ConfigureFonts(fonts =>
