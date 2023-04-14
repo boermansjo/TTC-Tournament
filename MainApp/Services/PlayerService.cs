@@ -17,10 +17,26 @@ namespace MainApp.Services
             _playersFilePath = playersFilePath;
         }
 
+        public void AddPlayer(Player player)
+        {
+            List<Player> list = GetPlayers();
+            list.Add(player);
+            string json = JsonSerializer.Serialize(list);
+            File.WriteAllText(_playersFilePath, json);
+        }
+
         public List<Player> GetPlayers()
         {
-            string json = File.ReadAllText(_playersFilePath);
-            return JsonSerializer.Deserialize<List<Player>>(json);
+            if (File.Exists(_playersFilePath))
+            {
+                string json = File.ReadAllText(_playersFilePath);
+                return JsonSerializer.Deserialize<List<Player>>(json);
+            }
+            else
+            {
+                return new List<Player>();
+            }
+            
         }
     }
 }

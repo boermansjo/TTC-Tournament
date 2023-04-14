@@ -24,5 +24,13 @@
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
+        <VerticalStackLayout>
+            <Label Text="Add Player" FontSize="Large" />
+            <Entry Placeholder="Name" Text="{Binding NewPlayerName}" />
+            <Entry Placeholder="Name" Text="{Binding NewPlayerSurname}" />
+            <Entry Placeholder="Rank" Keyboard="Numeric" Text="{Binding NewPlayerRank}" />
+            <Button Text="Add" Command="{Binding AddPlayerCommand}" />
+            <Label Text="{Binding ErrorMessage}" TextColor="Red" />
+        </VerticalStackLayout>
     </VerticalStackLayout>
 </ContentPage>
